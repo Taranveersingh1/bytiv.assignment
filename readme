@@ -84,14 +84,14 @@ URL: http://localhost:8000/tasks
 Get Task by ID:
 Method: GET
 URL: http://localhost:8000/tasks/<task-id>
-Update Task Status:
 
+Update Task Status:
 Method: PUT
 URL: http://localhost:8000/tasks/<task-id>
 Body (JSON):
 { "status": "completed" }
-Delete a Task:
 
+Delete a Task:
 Method: DELETE
 URL: http://localhost:8000/tasks/<task-id>
 
