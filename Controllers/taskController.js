@@ -1,5 +1,6 @@
 const Tasks=require('../Models/task')
 const mongoose=require('mongoose')
+//logic for creating task
 exports.createTask=async(req,res)=>{
     const title=req.body.title;
     const description=req.body.description;
@@ -12,7 +13,7 @@ exports.createTask=async(req,res)=>{
     }
 
 }
-
+//logic for getting all tasks
 exports.getAllTasks=async(req,res)=>{
     try{
     const allTasks=await Tasks.find()
@@ -21,7 +22,7 @@ exports.getAllTasks=async(req,res)=>{
       res.status(400).json({message:err.message});
     }
 }
-
+//logic for getting task by ID
 exports.getTasksById=async(req,res)=>{
     const Id=req.params.id
     if (!mongoose.isValidObjectId(Id)) {
@@ -39,7 +40,7 @@ exports.getTasksById=async(req,res)=>{
         res.status(400).json({message:err.message})
     }
 }
-
+//Delete task using id
 exports.deleteTaskById=async(req,res)=>{
     const Id=req.params.id
     try{
@@ -53,7 +54,7 @@ exports.deleteTaskById=async(req,res)=>{
        res.status(404).json({message:err.message});
     }
 }
-
+//update tasks using ID
 exports.updateTask=async(req,res)=>{
     const Id=req.params.id;
     const status=req.body.status;
