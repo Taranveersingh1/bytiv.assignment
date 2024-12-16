@@ -54,7 +54,7 @@ exports.deleteTaskById=async(req,res)=>{
        res.status(404).json({message:err.message});
     }
 }
-//update tasks using ID
+//update task status using ID
 exports.updateTask=async(req,res)=>{
     const Id=req.params.id;
     const status=req.body.status;
