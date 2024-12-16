@@ -103,5 +103,5 @@ URL: http://localhost:8000/tasks/<task-id>
 
 ## Troubleshooting
 
-1. **MongoDB connection error:** Ensure MongoDB is running or update the connection string in `server.js`.
+1. **MongoDB connection error:** Ensure MongoDB is running or update the connection string in `index.js`.
 2. **Invalid Task ID format:** The Task ID must be a valid MongoDB ObjectId.
